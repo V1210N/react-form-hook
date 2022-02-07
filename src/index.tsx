@@ -8,7 +8,7 @@ export type FormSchema<T extends Object> = {
 
 type FormSchemaItem<T> = {
 	value: T[FormKey<T>]
-	validators?: [(values: any) => string | null]
+	validators?: Array<(values: any) => string | null>
 	optional?: boolean
 	errors?: string[]
 	touched?: boolean
